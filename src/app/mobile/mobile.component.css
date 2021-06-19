@@ -1,0 +1,95 @@
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-self: center;
+  margin: auto;
+  width: 86.4%;
+}
+
+[class^="box-"] {
+  flex: 33%;
+  padding: 2%;
+  padding-right: 20px;
+  display: flex;
+  place-content: flex-end;
+  height: calc(100vh - 50vh);
+  flex-grow: 1;
+}
+.smalllogo {
+  width: 35px;
+  margin-bottom: 5px;
+}
+
+/* CONTAINER
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.wrapper {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* MAIN
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.page-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  background-blend-mode: luminosity;
+  color: var(--main-white-color);
+}
+
+.page-main h1 {
+  margin-bottom: 20px;
+}
+.page-main h1::after {
+  content: "";
+  border-bottom: 2px solid #fff;
+  display: block;
+  margin: 5px 0;
+}
+
+.page-main p + p {
+  margin-top: 10px;
+}
+
+.details,
+.productImage {
+  padding: 20px 20px 20px 40px;
+}
+.description {
+  color: lightgray;
+}
+.nextBtn,
+.prevBtn {
+  height: 70px;
+  width: 70px;
+  border: none;
+  font-size: 16px;
+  background: transparent;
+  color: white;
+  top: 45%;
+}
+.nextBtn {
+  position: fixed;
+  right: 0;
+}
+
+.prevBtn {
+  position: fixed;
+}
+.productImage {
+  text-align: center;
+}
+
+.productImage img {
+  width: 150px;
+}
+.mainlogo {
+  width: 65px;
+  margin: 20px;
+  position: fixed;
+  font-weight: bold;
+  top: 0;
+}

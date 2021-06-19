@@ -1,0 +1,44 @@
+<!-- <div class="flex-container" *ngFor="let item of items; let i = index">
+  <div *ngIf="current == i">
+    <div class="boxLeft">
+      <img src="{{ item.logo }}" class="smalllogo" />
+      <div class="title">
+        <p>{{ item.title }}</p>
+      </div>
+      <p class="desc">{{ item.desc }}</p>
+    </div>
+    <div class="boxRight">
+      <img src="{{ item.image }}" class="product-img" />
+    </div>
+  </div>
+</div>
+
+<button (click)="onImageChange()">Save</button> -->
+
+<div *ngFor="let item of items; let i = index">
+  <div *ngIf="current == i">
+    <div class="wrapper">
+      <main class="page-main" [style.background-color]="item.bg">
+        <img src="{{ logo }}" class="mainlogo" [style.background-color]="item.bg">
+        <div class="details">
+          <img src="{{ item.logo }}" class="smalllogo" />
+          <h1>{{ item.title }}</h1>
+          <p class="description">{{ item.desc }} ,{{item.bg}}</p>
+        </div>
+        <div class="productImage">
+          <img src="{{ item.image }}" />
+        </div>
+
+      </main>
+
+      <button class="prevBtn" (click)="prevImage()">
+        <mat-icon aria-hidden="false" aria-label="Example home icon">arrow_back_ios_new</mat-icon>
+      </button>
+      <button class="nextBtn" (click)="nextImage()">
+        <mat-icon aria-hidden="false" aria-label="Example home icon">arrow_forward_ios_new</mat-icon>
+
+      </button>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="flex-container">
+  <img src="{{ logo }}" class="logo" />
+  <!-- <div>
+    <ul-item></ul-item>
+  </div> -->
+  <div class="box-{{ i + 1 }}" *ngFor="let item of features; let i = index" [attr.data-index]="i">
+    <div class="boxLeft">
+      <img src="{{ item.logo }}" class="smalllogo" />
+      <div class="title">
+        <p>{{ item.title }}</p>
+      </div>
+      <p class="desc">{{ item.desc }}</p>
+    </div>
+    <div class="boxRight">
+      <img src="{{ item.image }}" class="product-img" />
+    </div>
+  </div>
+</div>
